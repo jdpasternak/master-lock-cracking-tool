@@ -19,9 +19,7 @@ function generateThirdNumber(stickies) {
     });
     let unique;
     Object.keys(digitCounts).forEach( i => {
-        // console.log(`Key: ${i}, Value: ${digitCounts[i]}`);
         if (digitCounts[i] == 1) {
-            // console.log(`${i} is unique`);
             unique = Number(i);
         }
     });
@@ -127,14 +125,12 @@ function getStickies() {
     if (stickies.length < 12 || stickies.length > 12) {
         error.setAttribute("display","hidden")
     }
-    // error.setAttribute("display","hidden");
     let temp = [];
     stickies.forEach( (i) => {
         if (!i.includes(".5")) {
             temp.push(i);
         }
     })
-    // console.log(temp);
     return temp;
 }
 
@@ -143,10 +139,7 @@ document.querySelector("button").addEventListener("click", event => {
 
     let stickies = getStickies();
     console.log(stickies);
-    
-    // TODO - Check for uniqueness
-    
-    // TODO - 
+
     let thirdNumber = generateThirdNumber(stickies);
     console.log(generateThirdNumber(stickies));
     let magicNumber = calculateMagicNumber(thirdNumber);
@@ -156,5 +149,3 @@ document.querySelector("button").addEventListener("click", event => {
     displayCombinations(combinations);
     console.log(`Third number: ${thirdNumber}\nMagic Number: ${magicNumber}\nFirst Number Possibilities: ${firstNumberPossibilities}\nSecond Number Possibilities: ${secondNumberPossibilities}`)
 });
-
-// displayCombinations(combinations);

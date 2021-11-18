@@ -10,18 +10,6 @@ label {
   display: inline-block;
 }
 
-div {
-  padding: 5px;
-  margin: 3px;
-  /* background-color: #ed8f3e; */
-  border: 1px solid black;
-}
-
-/* form {
-  display: grid;
-  grid-template-columns: 3;
-} */
-
 textarea {
   display: block;
 }
@@ -29,16 +17,4 @@ textarea {
 .error {
   color: red;
   border: none;
-}
-
-.btn {
-  color: whitesmoke;
-  background-color: blue;
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 4px;
-}
-
-.btn:hover {
-  opacity: 60%;
 }
