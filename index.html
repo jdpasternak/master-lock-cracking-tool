@@ -16,7 +16,7 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script type="module" src="./assets/js/main.js" defer></script>
+    <!-- <script type="module" src="./assets/js/main.js" defer></script> -->
   </head>
   <body>
     <header class="bg-dark text-light">
@@ -32,9 +32,14 @@
       <form>
         <label class="mb-2">
           Enter the 12 sticky numbers, one per line.
-          <a class="btn btn-info" id="how-to" href="#">
+          <button
+            type="button"
+            class="btn btn-info"
+            data-bs-toggle="modal"
+            data-bs-target="#howToModal"
+          >
             How to Get Sticky Numbers
-          </a>
+          </button>
         </label>
         <div class="row">
           <div class="col-3">
@@ -146,5 +151,75 @@
         </div>
       </form>
     </main>
+    <div class="modal fade" id="howToModal">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">How to Find Sticky Numbers</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>What are sticky numbers?</h6>
+            <p>
+              Sticky numbers refers to the positions on the Master Lock&reg;
+              dial where, when the shackle is pulled taught, the dial "sticks"
+              in place between two numbers.
+            </p>
+            <p>
+              The middle of these two numbers is the sticky number. For
+              instance, if you pull the shackle taught, turn the dial
+              counterclockwise and the dial "sticks" on 3 and 5, the sticky
+              number is 4. If it were 4 and 5, the number would be 4.5.
+            </p>
+            <h6>Steps to get sticky numbers</h6>
+            <ol class="list-group list-group-numbered mb-2">
+              <li class="list-group-item">
+                Turn the dial clockwise (numbers descending) about three times.
+                This clears the tumbler of any previous turns.
+              </li>
+              <li class="list-group-item">
+                On the last turn to clear the tumbler, stop at number 0.
+              </li>
+              <li class="list-group-item">
+                Apply firm and continuous upward force on the shackle.
+              </li>
+              <li class="list-group-item">
+                Begin to turn the dial counterclockwise until it sticks and goes
+                no further.
+              </li>
+              <li class="list-group-item">
+                You should be able to wiggle the dial between that first stuck
+                number and another. Take note, or type into the app, the number
+                that falls between the two stuck numbers. Remember: if the dial
+                sticks between two adjacent numbers (ex: 21 and 22), the sticky
+                number is 21.5.
+              </li>
+              <li class="list-group-item">
+                Continue this all the way around the dial, up to number 39.
+              </li>
+              <li class="list-group-item">
+                You should have 12 sticky numbers. Return to the previous page
+                and input those numbers in order.
+              </li>
+            </ol>
+            <p>
+              For a more detailed guide including pictures, check out this
+              <a
+                href="https://www.wikihow.com/Crack-a-%22Master-Lock%22-Combination-Lock"
+                target="_blank"
+                >wikiHow article</a
+              >. The article goes more in depth with the process of cracking the
+              lock by doing the math manually to generate possible combinations.
+              The tool on the previous page automates the combination
+              generation and does the math for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
