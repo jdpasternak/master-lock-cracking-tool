@@ -18,3 +18,7 @@ textarea {
   color: red;
   border: none;
 }
+
+.attempted {
+  background-color: lightpink;
+}
